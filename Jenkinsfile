@@ -45,6 +45,7 @@ pipeline{
 
                     npm i netlify-cli -g
                     node_modules/bin/netlify -v
+                    node_modules/bin/netlify -status
 
                     
                 '''
