@@ -3,7 +3,7 @@ pipeline{
         agent any
 
         stage("build_code"){
-            agent any 
+            // agent any 
 
             steps{
                 sh '''
