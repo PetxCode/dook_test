@@ -43,9 +43,9 @@ pipeline{
                     echo "Creating Pipeline to deploy"
                     
 
-                    npm i netlify-cli -g
-                    node_modules/bin/netlify -v
-                    node_modules/bin/netlify -status
+                    npm install netlify-cli -g
+                    node_modules/.bin/netlify -v
+                    node_modules/.bin/netlify -status
 
                     
                 '''
