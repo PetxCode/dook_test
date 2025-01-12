@@ -31,19 +31,10 @@ pipeline{
             }
         }
         stage("deploy_code"){
-            agent {
-                docker {
-                    image 'node:18-alpine'
-                    reuseNode true
-                }
-            } 
-
             steps{
                 sh '''
                     echo "Creating Pipeline to deploy"
-                    
-
-                    npm install netlify-cli
+                   
                     node_modules/.bin/netlify -v
                     node_modules/.bin/netlify -status
 
