@@ -42,6 +42,7 @@ pipeline{
                     echo "Creating Pipeline to deploy"
                    
                     node_modules/.bin/netlify -v
+                    node_modules/.bin/netlify status
 
 
                     node_modules/.bin/netlify deploy --dir=dist --prod
