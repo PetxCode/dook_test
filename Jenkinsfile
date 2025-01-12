@@ -46,7 +46,7 @@ pipeline{
 
                     node_modules/.bin/netlify --dir=dist --prod
 
-                    node_modules/.bin/netlify -status
+                    node_modules/.bin/netlify status
                     
                 '''
             }
