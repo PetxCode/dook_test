@@ -1,5 +1,5 @@
 const App = () => {
-  return <div>The Pipeline App </div>;
+  return <div>The Pipeline App deployed </div>;
 };
 
 export default App;
