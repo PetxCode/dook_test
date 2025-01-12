@@ -5,7 +5,7 @@ pipeline{
         NETLIFY_AUTH_TOKEN = credentials('netlify-token')
     }
 
-    stages{
+    stages {
         stage("build"){
             agent {
                 docker {
@@ -24,7 +24,8 @@ pipeline{
         }
 
         stage('deploy'){
-            sh '''
+            steps{
+                sh '''
                 node_modules/.bin/netlify -v
                 node_modules/.bin/netlify status
                 node_modules/.bin/netlify deploy --dir=dist --prod
@@ -32,6 +33,7 @@ pipeline{
 
                 echo "done"
             '''
+            }
         }
     }
 }
